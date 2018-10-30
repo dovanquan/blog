@@ -17,5 +17,3 @@ ReactDOM.render(
         <App />
     </Provider>, document.getElementById('root'));
 serviceWorker.unregister();
-
-ReactDOM.render(<App />, document.getElementById('root'));

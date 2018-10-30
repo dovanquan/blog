@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-// import {actLogout} from './../actions/index';
-// import {connect} from 'react-redux';
+import {actLogout} from './../actions/index';
+import {connect} from 'react-redux';
 
 class UserControl extends Component {
 	handeLogout = () => {
@@ -17,7 +17,7 @@ class UserControl extends Component {
 				<form  >
 				    <div className="row">
 				        <div className="form-group col-lg-6">
-				            <label className="text-heading">Hello: <strong>kumakko</strong></label>
+				            <label className="text-heading">Hello: <strong>{username}</strong></label>
 				        </div>
 				        <div className="clearfix" />
 						<div className="form-group col-lg-12">
@@ -31,13 +31,12 @@ class UserControl extends Component {
 }
 
 
-// const mapDispatchToProps = (dispatch, ownProps) => {
-//     return {
-//         formLogout: () => {
-//             dispatch(actLogout()) ;
-//         }
-//     }
-// }
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {
+        formLogout: () => {
+            dispatch(actLogout()) ;
+        }
+    }
+}
 
-// export default connect(null, mapDispatchToProps)(UserControl);
-export default UserControl;
+export default connect(null, mapDispatchToProps)(UserControl);
